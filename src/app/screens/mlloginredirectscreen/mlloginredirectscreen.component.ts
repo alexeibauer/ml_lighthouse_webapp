@@ -20,7 +20,7 @@ export class MlloginredirectscreenComponent implements OnInit {
       return;
     }
     var url = "https://auth.mercadolibre.com.mx/authorization?response_type=code&client_id="+this.appId+"&redirect_uri=https://api-dot-ml-lighthouse.uc.r.appspot.com/";
-    window.open(url); 
+    window.open(url);  
   }
 
 }
