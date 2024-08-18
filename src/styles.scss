@@ -1,0 +1,492 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~src/variables.scss';
+@import '~src/animations.scss';
+@import '~src/fonts.scss';
+
+body {
+    font-family: 'Montserrat';
+    height: 100%;
+    margin: 0; 
+    
+    color: $color-text-default !important;
+}
+
+
+.horizontal-float{
+    float: left;
+}
+
+.r-float{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.c-float{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.l-float{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+@media(max-width: 1024px){
+    .md-only{
+        display: none !important;
+    }
+}
+
+@media(min-width: 1024px){
+    .xs-only{
+        display: none !important;
+    }
+}
+
+.menu-v-spacer{
+    width: 1px;
+    height: 150px;
+}
+
+.v-spacer{
+    width: 1px;
+    height: 50px;
+}
+
+
+.v-top{
+    display: flex;
+    flex-direction: column;
+    justify-self: flex-start;
+    justify-content: flex-start;
+}
+
+.v-center{
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    justify-content: center;
+}
+
+.v-end{
+    display: flex;
+    flex-direction: column;
+    justify-self: flex-end;
+    justify-content: flex-end;
+}
+.h-center{
+    display: flex;
+    flex-direction: row;
+    justify-self: center;
+    justify-content: center;
+}
+.r-center{
+    display: flex;
+    flex-direction: row;
+    justify-self: flex-end;
+    justify-content: flex-end;
+}
+
+.l-center{
+    display: flex;
+    flex-direction: row;
+    justify-self: center;
+    justify-content: flex-start;
+}
+
+.spacer-5{
+    width: 1px;
+    height: 5vh;
+}
+
+.spacer-10{
+    width: 1px;
+    height: 10vh;
+}
+
+.spacer-20{
+    width: 1px;
+    height: 20vh;
+}
+
+.no-padding{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+h1,h2,h4{
+    font-family: "cloudy_auroraserif", sans-serif;
+    text-transform: uppercase;
+}
+
+h1{
+    @media(max-width: 1024px){
+        font-size: 1.5rem;
+    }
+}
+
+h3{
+    font-size: 1.5em;
+    letter-spacing: 4px;
+    color: $color-third;
+    text-transform: uppercase;
+}
+
+h5{
+    font-size: 1.2rem;
+}
+
+.bg-image-contain{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.bg-image-cover{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.no-margin{
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.boldclay-button{
+    background-color: $color-third;
+    color: $color-primary;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 5px;
+    padding-top: 5px;
+    font-size: 1rem;
+    border: 0;
+    font-weight: 300;
+    min-height: 45px;
+
+    &.warn{
+        background-color: red !important;
+    }
+
+    &.light{
+        letter-spacing: 1px;
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-top: 2px;
+        padding-top: 2px;
+        font-size: 0.8rem;
+        border: 0;
+        font-weight: 300;
+        min-height: 30px;
+    }
+}
+
+.boldclay-button:hover{
+    background-color: $color-primary;
+    color: $color-text-default;
+    border: solid 1px $color-third;
+    outline: none;
+
+    
+}
+
+.boldclay-button-secundario{
+    background-color: $color-primary;
+    color: third;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 5px;
+    padding-top: 5px;
+    font-size: 1rem;
+    border: 0;
+    font-weight: 300;
+    min-height: 45px;
+}
+
+.boldclay-button-secundario:hover{
+    background-color: $color-third;
+    color: white;
+    border: solid 1px $color-primary;
+    outline: none;
+}
+
+.line-separator{
+    width: 100%;
+    height: 1px;
+    background-color: #8e8f8d;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    .light{
+        background-color: #555959 !important;
+    }
+
+    &.short{
+        margin-top: 10px !important;
+        margin-bottom: 30px !important;
+    }
+}
+
+
+.white-link{
+    color: white;
+    text-decoration: none;
+}
+.white-link:visited{
+    color: white;
+    text-decoration: none;
+}
+
+.white-link:hover{
+    color: white;
+    text-decoration: none;
+}
+
+.min-screen-height{
+    min-height: 50vh;
+}
+
+.main-bg-color{
+    background-color: $color-primary;
+}
+
+/**Input styles**/
+
+.boldclay-input-wrapper{
+    position: relative;
+    background-color: $bg-input;
+    width: 100%;
+    height: 60px;
+    padding: 10px;
+}
+
+.boldclay-input-icon{
+    top: 20%;
+    left: 15px;
+    position: absolute;
+    font-size: 1.3rem;
+    color: #948F6A;
+}
+
+.boldclay-input{
+    height: 90%;
+    background-color: transparent;
+    border: 0;
+    width: 75%;
+    outline: none;
+}
+
+.boldclay-input-button{
+    position: absolute;
+    top: 15%;
+    right: 20px;
+}
+
+.boldclay-input::placeholder {
+    color: #948F6A;
+    font-size: 1.2em;
+}
+
+.error-feedback{
+    display: block;
+    font-weight: bold;
+    color: #E84150;
+}
+
+//Modal login
+.icon-close{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.fa-times{
+    color: #000000 !important;
+}
+
+.form-login{
+    padding-top: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    gap: 20px;
+}
+
+//Dashboard
+.container-dashboard{
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.button-section{
+    background-color: transparent;
+    color: #000000;
+    letter-spacing: 2px;
+    text-align: left;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-top: 5px;
+    font-size: 1rem;
+    border: 0;
+    font-weight: 300;
+    width: 10rem;
+    min-height: 45px;
+
+    &.selected{
+        background-color: $color-third;
+        color: white;
+        outline: none;
+        width: 10rem;     
+    }
+}
+
+.button-section:hover{
+    font-weight: bold;
+}
+
+
+.data-table {
+    border: solid 1px $color-primary;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.data-table thead th {
+    background-color: $color-third;
+    border: solid 1px $color-primary;
+    color: white;
+    padding: 10px;
+    text-align: left;
+    font-size: 1.2em;
+}
+.data-table tbody td {
+    border: solid 1px $color-primary;
+    color: #333;
+    padding: 10px;
+    text-shadow: 1px 1px 1px #fff;
+    font-size: 1.1em;
+}
+//Registro centros
+.datos-centro{
+    text-align: center!important;
+}
+
+.form-control{
+    background-color: transparent;
+}
+
+.form-control:focus{
+    background-color: transparent;
+    outline: none;
+    box-shadow: none;
+    border-color: #000000;
+}
+
+.input-text{
+    text-align: left!important;
+    .form-label{
+        font-size: 1rem;
+        font-weight: bold;
+    }
+    .form-check-label{
+        font-size: 1rem;
+        margin-left: 10px;
+    }
+
+    .form-check-input{
+        width: 1.2rem;
+        height: 1.2rem;
+    }
+}
+
+.loader{
+    font-size: 1.25em;
+    color: white;
+    position: absolute;
+}
+
+.tag-version{
+    font-size: 0.7em;
+    color: lightgray;
+    position: absolute;
+    top: 0px;
+    right: 10px;
+}
+
+.boldclay-link{
+    text-decoration: underline !important;
+    color: black;
+    cursor: pointer;
+
+    &.danger{
+        color: red !important;
+    }
+}
+.boldclay-link:visited{
+    text-decoration: underline !important;
+    color: black;
+    cursor: pointer;
+
+    &.danger{
+        color: red !important;
+    }
+}
+
+.boldclay-link:hover{
+    text-decoration: underline !important;
+    color: black;
+    cursor: pointer;
+    font-weight: bold;
+
+    &.danger{
+        color: red !important;
+    }
+}
+
+.check-circle{
+    font-weight: bold;
+    font-size: 2em;
+    color: green;
+}
+
+.icon{
+    font-weight: bold;
+    color: $color-third;
+    font-size: 1.2em;
+    cursor: pointer;
+
+    &.delete{
+        color: red;
+    }
+}
+
+.main-container{
+    padding: 20px;
+}
+
+.panel{
+    border: solid 1px lightgray;
+    border-radius: 15px;
+    padding: 20px;
+    min-height: 500px;
+    margin: 10px;
+}
+
+.error-header{
+    font-style: italic;
+    border-bottom: solid 1px lightgray;
+    margin: 5px;   
+}
+
+.small-message{
+    font-size: 12px;
+    font-style: italic;
+}

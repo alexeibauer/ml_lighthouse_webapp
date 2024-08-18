@@ -1,0 +1,14 @@
+runtime: python39
+instance_class: F2
+
+handlers:
+
+- url: /
+  static_files: dist/ml_lighthouse_web/index.html
+  upload: dist/ml_lighthouse_web/index.html
+  secure: always
+
+- url: /(.*)
+  static_files: dist/ml_lighthouse_web/\1
+  upload: dist/ml_lighthouse_web/(.*)
+  secure: always
