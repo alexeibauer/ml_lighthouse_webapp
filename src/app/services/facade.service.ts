@@ -46,6 +46,16 @@ export class FacadeService {
     return headers;
   }
 
+  public crearCuenta(code, client_id, client_secret){
+    var data = {
+      code: code,
+      client_id: client_id,
+      client_secret: client_secret
+    };
+
+    return this.http.post<any>(environment.url_api+'/cuentas/', data, {headers:{}});
+  }
+
   
 
 }

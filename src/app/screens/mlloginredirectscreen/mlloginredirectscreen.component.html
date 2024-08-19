@@ -1,5 +1,5 @@
 <div class="container">
-
+    <div class="row">&nbsp;</div>
     <div class="row">
         <div class="col-12">
             <h1>
@@ -8,7 +8,7 @@
 
         </div>
     </div>
-    <div class="row">
+    <div class="row" *ngIf="!code">
         <div class="col-12">
             <div class="row">
                 <div class="col-12">
@@ -17,14 +17,47 @@
                     </h4>
                 </div>
             </div>
+            <div class="row">&nbsp;</div>
             <div class="row">
                 <div class="col-12">
-                    <input type="text" [(ngModel)]="appId"/>
+                    <input type="text" [(ngModel)]="appId" style="width:300px"/>
                 </div>
             </div>
+            <div class="row">&nbsp;</div>
             <div class="row">
                 <div class="col-12">
-                    <button (click)="abrirMLConexion()"></button>
+                    <button (click)="abrirMLConexion()">CONECTAR APP</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="row" *ngIf="code">
+        <div class="col-12">
+            <div class="row">
+                <div class="col-12">
+                    <h4>
+                        Ingresa tu client id y client secret para finalizar la conexión
+                    </h4>
+                </div>
+            </div>
+            <div class="row">&nbsp;</div>
+            <div class="row">
+                <div class="col-12">
+                    Client id: <input type="text" [(ngModel)]="client_id" style="width:300px"/>
+                </div>
+            </div>
+            <div class="row">&nbsp;</div>
+            <div class="row">
+                <div class="col-12">
+                    Client secret: <input type="text" [(ngModel)]="client_secret" style="width:300px"/>
+                </div>
+            </div>
+            <div class="row">&nbsp;</div>
+            <div class="row">
+                <div class="col-12">
+                    <button (click)="crearCuenta()">FINALIZAR CONEXIÓN</button>
                 </div>
             </div>
 
