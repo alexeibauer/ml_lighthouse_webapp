@@ -4,6 +4,7 @@
 
 export const environment = {
   url_api: "http://127.0.0.1:8000",
+  ml_redirect_url: "https://localhost:4200/",
   google_maps_javascript_api: "XXXXXXXXX",
   ga_code: "G-XXXXXXXXX",
   version: "1.0.0",

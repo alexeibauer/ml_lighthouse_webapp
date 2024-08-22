@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FacadeService } from 'src/app/services/facade.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-mlloginredirectscreen',
@@ -33,7 +34,7 @@ export class MlloginredirectscreenComponent implements OnInit {
       alert("Proporciona un app id primero");
       return;
     }
-    var url = "https://auth.mercadolibre.com.mx/authorization?response_type=code&client_id="+this.appId+"&redirect_uri=https://ml-lighthouse.uc.r.appspot.com/";
+    var url = "https://auth.mercadolibre.com.mx/authorization?response_type=code&client_id="+this.appId+"&redirect_uri="+environment.ml_redirect_url;
     window.open(url);  
   }
 
